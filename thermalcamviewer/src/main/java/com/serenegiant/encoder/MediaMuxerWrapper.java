@@ -1,5 +1,9 @@
 package com.serenegiant.encoder;
 /*
+ * Thermal Camera Viewer
+ *
+ * Copyright (c) 2016 Martin F Falatic (martin@falatic.com)
+ *
  * UVCCamera
  * library and sample to access to UVC web camera on non-rooted Android device
  *
@@ -41,7 +45,7 @@ public class MediaMuxerWrapper {
 	private static final boolean DEBUG = true;	// TODO set false on release
 	private static final String TAG = "MediaMuxerWrapper";
 
-	private static final String DIR_NAME = "USBCameraTest";
+	private static final String DIR_NAME = "ThermalCamViewer";
     private static final SimpleDateFormat mDateTimeFormat = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss", Locale.US);
 
 	private String mOutputPath;

@@ -1,6 +1,7 @@
-package com.serenegiant.usbcameralepton;
+package com.serenegiant.thermalcamviewer;
 /*
- * UVCCamera Lepton
+ * Thermal Camera Viewer
+ *
  * Copyright (c) 2016 Martin F Falatic (martin@falatic.com)
  *
  * library and sample to access to UVC web camera on non-rooted Android device

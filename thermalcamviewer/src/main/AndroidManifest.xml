@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!--
  /*
+ * Thermal Camera Viewer
+ *
+ * Copyright (c) 2016 Martin F Falatic (martin@falatic.com)
+ *
  * UVCCamera
  * library and sample to access to UVC web camera on non-rooted Android device
  *
@@ -25,7 +29,7 @@
 */
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.serenegiant.usbcameralepton" >
+    package="com.serenegiant.thermalcamviewer" >
 
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
@@ -38,7 +42,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.serenegiant.usbcameralepton.MainActivity"
+            android:name="com.serenegiant.thermalcamviewer.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
