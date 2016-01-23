@@ -1,4 +1,4 @@
-package com.serenegiant.widget;
+package com.falatic.widget;
 /*
  * UVCCamera
  * library and sample to access to UVC web camera on non-rooted Android device

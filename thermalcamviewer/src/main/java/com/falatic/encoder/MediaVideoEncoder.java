@@ -1,4 +1,4 @@
-package com.serenegiant.encoder;
+package com.falatic.encoder;
 /*
  * UVCCamera
  * library and sample to access to UVC web camera on non-rooted Android device
@@ -33,7 +33,7 @@ import android.opengl.EGLContext;
 import android.util.Log;
 import android.view.Surface;
 
-import com.serenegiant.glutils.RenderHandler;
+import com.falatic.glutils.RenderHandler;
 
 public class MediaVideoEncoder extends MediaEncoder {
 	private static final boolean DEBUG = true;	// TODO set false on release

@@ -1,4 +1,4 @@
-package com.serenegiant.widget;
+package com.falatic.widget;
 /*
  * UVCCamera
  * library and sample to access to UVC web camera on non-rooted Android device
@@ -29,7 +29,7 @@ import android.graphics.SurfaceTexture;
 import android.util.AttributeSet;
 import android.view.TextureView;
 
-import com.serenegiant.encoder.MediaEncoder;
+import com.falatic.encoder.MediaEncoder;
 
 /**
  * change the view size with keeping the specified aspect ratio.

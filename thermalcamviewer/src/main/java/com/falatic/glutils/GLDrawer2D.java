@@ -1,4 +1,4 @@
-package com.serenegiant.glutils;
+package com.falatic.glutils;
 /*
  * UVCCamera
  * library and sample to access to UVC web camera on non-rooted Android device

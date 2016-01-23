@@ -1,4 +1,4 @@
-package com.serenegiant.encoder;
+package com.falatic.encoder;
 /*
  * Thermal Camera Viewer
  *

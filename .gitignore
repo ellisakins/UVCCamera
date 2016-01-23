@@ -30,3 +30,7 @@ local.properties
 
 # gedit
 *~
+
+# Built application files
+*.apk
+*.ap_

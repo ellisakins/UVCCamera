@@ -1,4 +1,4 @@
-package com.serenegiant.thermalcamviewer;
+package com.falatic.thermalcamviewer;
 /*
  * Thermal Camera Viewer
  *
@@ -58,18 +58,18 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
-import com.serenegiant.encoder.MediaAudioEncoder;
-import com.serenegiant.encoder.MediaEncoder;
-import com.serenegiant.encoder.MediaMuxerWrapper;
-import com.serenegiant.encoder.MediaSurfaceEncoder;
-import com.serenegiant.encoder.MediaVideoEncoder;
+import com.falatic.encoder.MediaSurfaceEncoder;
+import com.falatic.encoder.MediaAudioEncoder;
+import com.falatic.encoder.MediaEncoder;
+import com.falatic.encoder.MediaMuxerWrapper;
+import com.falatic.encoder.MediaVideoEncoder;
 
 import com.serenegiant.usb.CameraDialog;
 import com.serenegiant.usb.USBMonitor;
 import com.serenegiant.usb.USBMonitor.OnDeviceConnectListener;
 import com.serenegiant.usb.USBMonitor.UsbControlBlock;
 import com.serenegiant.usb.UVCCamera;
-import com.serenegiant.widget.CameraViewInterface;
+import com.falatic.widget.CameraViewInterface;
 
 public final class MainActivity extends Activity implements CameraDialog.CameraDialogParent {
 	private static final boolean DEBUG = true;	// TODO set false on release
@@ -129,15 +129,15 @@ public final class MainActivity extends Activity implements CameraDialog.CameraD
 		super.onCreate(savedInstanceState);
 		if (DEBUG) Log.v(TAG, "onCreate:");
 		if (USE_SURFACE_ENCODER)
-			setContentView(R.layout.activity_main2);
+			setContentView(com.falatic.thermalcamviewer.R.layout.activity_main2);
 		else
-			setContentView(R.layout.activity_main);
-		mCameraButton = (ToggleButton)findViewById(R.id.camera_button);
+			setContentView(com.falatic.thermalcamviewer.R.layout.activity_main);
+		mCameraButton = (ToggleButton)findViewById(com.falatic.thermalcamviewer.R.id.camera_button);
 		mCameraButton.setOnClickListener(mOnClickListener);
-		mCaptureButton = (ImageButton)findViewById(R.id.capture_button);
+		mCaptureButton = (ImageButton)findViewById(com.falatic.thermalcamviewer.R.id.capture_button);
 		mCaptureButton.setOnClickListener(mOnClickListener);
 		mCaptureButton.setVisibility(View.INVISIBLE);
-		final View view = findViewById(R.id.camera_view);
+		final View view = findViewById(com.falatic.thermalcamviewer.R.id.camera_view);
 		view.setOnLongClickListener(mOnLongClickListener);
 		mUVCCameraView = (CameraViewInterface)view;
 		mUVCCameraView.setAspectRatio(PREVIEW_WIDTH / (float)PREVIEW_HEIGHT);
@@ -193,7 +193,7 @@ public final class MainActivity extends Activity implements CameraDialog.CameraD
 		@Override
 		public void onClick(final View view) {
 			switch (view.getId()) {
-			case R.id.camera_button:
+			case com.falatic.thermalcamviewer.R.id.camera_button:
 				if (!mHandler.isCameraOpened()) {
 					CameraDialog.showDialog(MainActivity.this);
 				} else {
@@ -201,7 +201,7 @@ public final class MainActivity extends Activity implements CameraDialog.CameraD
 					mCaptureButton.setVisibility(View.INVISIBLE);
 				}
 				break;
-			case R.id.capture_button:
+			case com.falatic.thermalcamviewer.R.id.capture_button:
 				if (mHandler.isCameraOpened()) {
 					if (!mHandler.isRecording()) {
 						mCaptureButton.setColorFilter(0xffff0000);	// turn red
@@ -223,7 +223,7 @@ public final class MainActivity extends Activity implements CameraDialog.CameraD
 		@Override
 		public boolean onLongClick(final View view) {
 			switch (view.getId()) {
-			case R.id.camera_view:
+			case com.falatic.thermalcamviewer.R.id.camera_view:
 				if (mHandler.isCameraOpened()) {
 					mHandler.captureStill();
 					return true;
@@ -672,7 +672,7 @@ public final class MainActivity extends Activity implements CameraDialog.CameraD
 		        }
 		        // load sutter sound from resource
 			    mSoundPool = new SoundPool(2, streamType, 0);
-			    mSoundId = mSoundPool.load(context, R.raw.camera_click, 1);
+			    mSoundId = mSoundPool.load(context, com.falatic.thermalcamviewer.R.raw.camera_click, 1);
 			}
 
 			@Override
