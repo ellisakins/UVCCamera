@@ -81,20 +81,20 @@ public final class MainActivity extends Activity implements CameraDialog.CameraD
 	 *  by almost same way as USBCameratest2)
 	 * set false if you want to record movie using MediaVideoEncoder
 	 */
-    private static final boolean USE_SURFACE_ENCODER = false;
+    private static final boolean USE_SURFACE_ENCODER = false; // true works but with a tiny video size
 
     /**
      * preview resolution(width)
      * if your camera does not support specific resolution and mode,
      * {@link UVCCamera#setPreviewSize(int, int, int)} throw exception
      */
-    private static final int PREVIEW_WIDTH = 640;
+    private static final int PREVIEW_WIDTH = 80; //640;
     /**
      * preview resolution(height)
      * if your camera does not support specific resolution and mode,
      * {@link UVCCamera#setPreviewSize(int, int, int)} throw exception
      */
-    private static final int PREVIEW_HEIGHT = 480;
+    private static final int PREVIEW_HEIGHT = 60; //480;
     /**
      * preview mode
      * if your camera does not support specific resolution and mode,

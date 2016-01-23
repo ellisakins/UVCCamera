@@ -170,7 +170,18 @@ public class CameraDialog extends DialogFragment {
 			case DialogInterface.BUTTON_POSITIVE:
 				final Object item = mSpinner.getSelectedItem();
 				if (item instanceof UsbDevice) {
-					mUSBMonitor.requestPermission((UsbDevice)item);
+//					AlertDialog ad = new AlertDialog.Builder(getActivity()).create();
+//					ad.setTitle("Hello");
+//					ad.setMessage("stuff\nMore stuff");
+//					ad.setCancelable(true);
+//
+//					ad.setButton(getActivity().getString(R.string.ok_text), new DialogInterface.OnClickListener() {
+//						public void onClick(DialogInterface dialog, int which) {
+//							dialog.dismiss();
+//						}
+//					});
+//					ad.show();
+					mUSBMonitor.requestPermission((UsbDevice) item);
 				}
 				break;
 			}
