@@ -571,7 +571,8 @@ static void copyFrame(const uint8_t *src, uint8_t *dest, const int width, int he
 		memcpy(dest, src, width);
 		dest += stride_dest; src += stride_src;
 	}
-	for (int i = 0; i < height; i += 8) {
+	//modified by eric 2016-03-16 to avoid overflow
+	for (int i = 0; i < height-h8; i += 8) {
 		memcpy(dest, src, width);
 		dest += stride_dest; src += stride_src;
 		memcpy(dest, src, width);

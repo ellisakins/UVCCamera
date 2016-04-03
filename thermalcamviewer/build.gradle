@@ -5,11 +5,11 @@ android {
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        applicationId "com.serenegiant.thermalcamviewer"
+        applicationId "com.falatic.thermalcamviewer"
         minSdkVersion 18
         targetSdkVersion 22
-		versionCode 7
-		versionName "2.20"
+		versionCode 8
+		versionName "2.3"
     }
 
     buildTypes {
