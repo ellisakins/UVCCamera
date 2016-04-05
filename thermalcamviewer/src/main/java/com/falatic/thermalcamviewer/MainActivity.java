@@ -54,6 +54,7 @@ import android.view.Surface;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnLongClickListener;
+import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -195,10 +196,12 @@ public final class MainActivity extends Activity implements CameraDialog.CameraD
 			switch (view.getId()) {
 			case com.falatic.thermalcamviewer.R.id.camera_button:
 				if (!mHandler.isCameraOpened()) {
+					getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 					CameraDialog.showDialog(MainActivity.this);
 				} else {
 					mHandler.closeCamera();
 					mCaptureButton.setVisibility(View.INVISIBLE);
+					getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 				}
 				break;
 			case com.falatic.thermalcamviewer.R.id.capture_button:
